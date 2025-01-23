@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "node ./node_modules/eslint/bin/eslint.js"
+  },
+  "lint-staged": {
+    "src/**/*": "node run lint --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
